@@ -97,11 +97,25 @@ let total = 0;
 
 for (let i = 0; i < finances.length; i++) {
     total = total + finances[i][1];
-    //total = total  / 86;
+    
     
 }
 
 console.log('Total:', total);
+
+// Average
+
+let totalChanges = 0;
+
+for (let i = 0; i < finances.length; i++) {
+    totalChanges = totalChanges + finances[i][1];
+    totalChanges = totalChanges / 86; 
+}
+
+console.log('Average  Change:', totalChanges);
+
+
+
 
 
 
