@@ -89,7 +89,19 @@ let finances = [
 
 console.log('Financial Analysis');
 console.log('--------------------------');
+// Total number of months
+console.log('Total Months:', finances.length);
 
-console.log('Total:', finances.length);
+// net total
+let total = 0;
+
+for (let i = 0; i < finances.length; i++) {
+    total = total + finances[i][1];
+    //total = total  / 86;
+    
+}
+
+console.log('Total:', total);
+
 
 
