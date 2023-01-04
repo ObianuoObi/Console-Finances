@@ -87,47 +87,61 @@ let finances = [
     ['Feb-2017', 671099]
 ];
 
-console.log('Financial Analysis');
-console.log('--------------------------');
-// Total number of months
-console.log('Total Months:', finances.length);
+// console.log('Financial Analysis');
+// console.log('--------------------------');
+// // Total number of months
+// console.log('Total Months:', finances.length);
 
-// net total
-let total = 0;
+// // net total
+// let total = 0;
 
-for (let i = 0; i < finances.length; i++) {
-    total += finances[i][1];
+// for (let i = 0; i < finances.length; i++) {
+//     total += finances[i][1];
 
 
-}
+// }
 
-console.log('Total:', '$', + total);
+// console.log('Total:', '$', + total);
 
 // Average
 
 
-let totalChanges = [];
+// let totalChanges = [];
 
-for (let i = 0; i < finances.length - 1; i++) {
-   // console.log("total of 2 months:   ")
-    totalChanges.push(finances[i + 1][1] - finances[i][1]);
+// for (let i = 0; i < finances.length - 1; i++) {
+//    // console.log("total of 2 months:   ")
+//     totalChanges.push(finances[i + 1][1] - finances[i][1]);
 
 
-}
+// }
+
 
 
 //console.log('Average  Change:', totalChanges);
 //total of all profits/losses for every 2 months in this array
 //console.log(totalChanges)
 
-let totalProfitLoss = 0
-// Here want to iterate to the totalChanges array and all the total profits/losses
-for (let i = 0; i < totalChanges.length; i++) {
-    totalProfitLoss += totalChanges[i]
+// let totalProfitLoss = 0
+// // Here want to iterate to the totalChanges array and all the total profits/losses
+// for (let i = 0; i < totalChanges.length; i++) {
+//     totalProfitLoss += totalChanges[i]
+// }
+
+// console.log("total: ", "$",+ totalProfitLoss);
+// console.log("Avg: ", "$", + totalProfitLoss / 85);
+
+// // The greatest increase 
+
+let greatestIncrease = finances[0];
+
+for (let i = 1; i < finances.length; i++) {
+  if (finances[i] > greatestIncrease) {
+    greatestIncrease = finances[i];
+  }
 }
 
-console.log("total: ", "$",+ totalProfitLoss);
-console.log("Avg: ", "$", + totalProfitLoss / 85);
+console.log(greatestIncrease);
+
 
 
 
