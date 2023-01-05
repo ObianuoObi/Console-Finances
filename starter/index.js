@@ -115,8 +115,6 @@ for (let i = 0; i < finances.length - 1; i++) {
 
 }
 
-
-
 //console.log('Average  Change:', totalChanges);
 //total of all profits/losses for every 2 months in this array
 //console.log(totalChanges)
@@ -130,34 +128,31 @@ for (let i = 0; i < totalChanges.length; i++) {
 console.log("total: ", "$",+ totalProfitLoss);
 console.log("Avg: ", "$", + totalProfitLoss / 85);
 
-// // The greatest increase 
+// Greatest Increase
 
-let greatestIncrease = finances[0];
+let highestEarning = finances[0];
 
-for (let i = 1; i < finances.length; i++) {
-  if (finances[i] > greatestIncrease) {
-    greatestIncrease = finances[i];
-  }
+for (let i = 0; i < totalChanges.length; i++) {
+    if (totalChanges[i] > highestEarning) {
+        highestEarning =  totalChanges[i];
+    }
 }
-
-console.log("Greatest increase in profit:",  greatestIncrease);
-
+ console.log("Greatest increase in profit:",  highestEarning);
 
 // Greatest Decrease
-
-let greatestDecrease = finances[1];
-
-for (let i = 1; i < finances.length; ++i) {
-  if (finances[1] < greatestDecrease) {
-    greatestDecrease = finances[1];
-  }
- }
- console.log("Greatest decrease in profit:",  greatestDecrease);
-
-
+ 
+   let greatestDecrease = finances[0];
+   
+   for (let i = 1; i < finances.length; i++) {
+    if (finances[i] < greatestDecrease){
+      greatestDecrease = finances[i];
+    }
+   }
+   console.log('Greatest Decrease in profit:', greatestDecrease);
 
 
 
+ 
 
 
 
